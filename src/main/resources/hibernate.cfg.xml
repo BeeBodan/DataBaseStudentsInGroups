@@ -11,7 +11,7 @@
         <property name="hibernate.show_sql">true</property>
         <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQL9Dialect</property>
 
-        <mapping class="com.bogdan.Students"/>
-        <mapping class="com.bogdan.Group"/>
+        <mapping class="com.bogdan.model.Students"/>
+        <mapping class="com.bogdan.model.Group"/>
     </session-factory>
 </hibernate-configuration>

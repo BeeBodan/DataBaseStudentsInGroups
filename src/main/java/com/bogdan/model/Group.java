@@ -1,4 +1,4 @@
-package com.bogdan;
+package com.bogdan.model;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -8,7 +8,7 @@ import javax.persistence.*;
 @Table(name = "GROUPS")
 public class Group {
 
-    private long id;
+    private int id;
     private String groupName;
 
     private Set<Students> students = new HashSet<Students>();
@@ -24,7 +24,7 @@ public class Group {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "group_id")
-    public long getId() {
+    public int getId() {
         return id;
     }
 
@@ -43,7 +43,7 @@ public class Group {
         return students;
     }
 
-    public void setId(long id) {
+    public void setId(int id) {
         this.id = id;
     }
 

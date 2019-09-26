@@ -1,5 +1,7 @@
 package com.bogdan;
 
+import com.bogdan.model.Group;
+import com.bogdan.model.Students;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;

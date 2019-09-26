@@ -1,5 +1,8 @@
 package com.bogdan;
 
+import com.bogdan.dao.StudentsGroupsDao;
+import com.bogdan.model.Group;
+import com.bogdan.model.Students;
 import org.hibernate.Session;
 
 public class Main {
@@ -30,45 +33,28 @@ public class Main {
         Students students10 = new Students("Alisa", 33);
 
         //Add students to groups
-        group1.addStudent(students1);
-        group1.addStudent(students4);
-        group1.addStudent(students5);
-        group1.addStudent(students9);
-        group1.addStudent(students10);
+        group1.addStudent(students1);   students1.addGroup(group1);
+        group1.addStudent(students4);   students4.addGroup(group1);
+        group1.addStudent(students5);   students5.addGroup(group1);
+        group1.addStudent(students9);   students9.addGroup(group1);
+        group1.addStudent(students10);  students10.addGroup(group1);
 
-        group2.addStudent(students3);
-        group2.addStudent(students6);
-        group2.addStudent(students9);
+        group2.addStudent(students3);   students3.addGroup(group2);
+        group2.addStudent(students6);   students6.addGroup(group2);
+        group2.addStudent(students9);   students9.addGroup(group2);
 
-        group3.addStudent(students1);
-        group3.addStudent(students2);
-        group3.addStudent(students9);
+        group3.addStudent(students1);   students1.addGroup(group3);
+        group3.addStudent(students2);   students2.addGroup(group3);
+        group3.addStudent(students9);   students9.addGroup(group3);
 
-        group4.addStudent(students4);
-        group4.addStudent(students7);
-        group4.addStudent(students8);
-        group4.addStudent(students9);
+        group4.addStudent(students4);   students4.addGroup(group4);
+        group4.addStudent(students7);   students7.addGroup(group4);
+        group4.addStudent(students8);   students8.addGroup(group4);
+        group4.addStudent(students9);   students9.addGroup(group4);
 
-        group5.addStudent(students5);
-        group5.addStudent(students9);
+        group5.addStudent(students5);   students5.addGroup(group5);
+        group5.addStudent(students9);   students9.addGroup(group5);
 
-        students1.addGroup(group1);
-        students1.addGroup(group3);
-        students2.addGroup(group3);
-        students3.addGroup(group2);
-        students4.addGroup(group1);
-        students4.addGroup(group4);
-        students5.addGroup(group1);
-        students5.addGroup(group5);
-        students6.addGroup(group2);
-        students7.addGroup(group4);
-        students8.addGroup(group4);
-        students9.addGroup(group1);
-        students9.addGroup(group2);
-        students9.addGroup(group3);
-        students9.addGroup(group4);
-        students9.addGroup(group5);
-        students10.addGroup(group1);
 
         session.save(group1);
         session.save(group2);
@@ -79,5 +65,10 @@ public class Main {
         //Close
         session.getTransaction().commit();
         session.close();
+
+        //Output some info
+        StudentsGroupsDao dao = new StudentsGroupsDao();
+        System.out.println("All students in group Java: " + dao.listStudentsByGroups("Java"));
+        System.out.println("All groups where Viki studies: " + dao.listGroupsByStudents("Viki"));
     }
 }

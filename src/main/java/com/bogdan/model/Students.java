@@ -1,4 +1,4 @@
-package com.bogdan;
+package com.bogdan.model;
 
 import java.util.HashSet;
 import java.util.Set;
