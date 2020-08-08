@@ -44,7 +44,7 @@ CREATE TABLE students_groups (
 );
 ```
 
-===========================
+========================================
 
 **2.** Next step groups, students are created and the belonging of each student to different groups is indicated.
 
@@ -60,7 +60,7 @@ Result in database:
 ![Screenshot](https://github.com/bbogdasha/postgresqlManyToMany/blob/master/screenshots/Screenshot_3.jpg)
 
 
-===========================
+======================================
 
 **3.** Using SQL queries, you can get data from a database, a list of students from a specific group, or a list of groups that have a student with a specific name.
 
