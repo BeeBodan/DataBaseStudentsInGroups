@@ -5,7 +5,7 @@ import java.util.Set;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "students")
+@Table(name = "crud.students")
 public class Students {
 
     private long id;
@@ -39,6 +39,7 @@ public class Students {
         return groups;
     }
 
+    @Column(name = "student_age")
     public int getAge() {
         return age;
     }

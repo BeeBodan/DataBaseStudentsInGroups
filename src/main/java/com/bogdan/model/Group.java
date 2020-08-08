@@ -5,12 +5,11 @@ import java.util.Set;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "GROUPS")
+@Table(name = "crud.GROUPS")
 public class Group {
 
     private int id;
     private String groupName;
-
     private Set<Students> students = new HashSet<Students>();
 
     public Group(String groupName) {
@@ -35,7 +34,7 @@ public class Group {
 
     @ManyToMany(cascade = CascadeType.ALL)
     @JoinTable(
-            name = "students_groups",
+            name = "crud.students_groups",
             joinColumns = @JoinColumn(name = "group_id"),
             inverseJoinColumns = @JoinColumn(name = "student_id")
     )

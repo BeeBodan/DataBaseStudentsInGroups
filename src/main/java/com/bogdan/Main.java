@@ -68,7 +68,9 @@ public class Main {
 
         //Output some info
         StudentsGroupsDao dao = new StudentsGroupsDao();
-        System.out.println("All students in group Java: " + dao.listStudentsByGroups("Java"));
-        System.out.println("All groups where Viki studies: " + dao.listGroupsByStudents("Viki"));
+        System.out.println("List students: " + dao.listStudentsByGroups("Java"));
+        System.out.println("List students: " + dao.listStudentsByGroups("PHP"));
+        System.out.println("List groups: " + dao.listGroupsByStudents("Viki"));
+        System.out.println("List groups: " + dao.listGroupsByStudents("Ben"));
     }
 }
