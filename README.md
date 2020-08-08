@@ -48,11 +48,11 @@ CREATE TABLE students_groups (
 **2.** Next step groups, students are created and the belonging of each student to different groups is indicated.
 
 Result in database:
-..*Groups
+- Groups
 ![Screenshot](https://github.com/bbogdasha/postgresqlManyToMany/blob/master/screenshots/Screenshot_1.jpg)
-..*Students
+- Students
 ![Screenshot](https://github.com/bbogdasha/postgresqlManyToMany/blob/master/screenshots/Screenshot_2.jpg)
-..*Student_Groups
+- Student_Groups
 ![Screenshot](https://github.com/bbogdasha/postgresqlManyToMany/blob/master/screenshots/Screenshot_3.jpg)
 ===========================
 
